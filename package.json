@@ -1,5 +1,5 @@
 {
-  "name": "11472692_strepsils",
+  "name": "11412292_why_opsumit_tool",
   "version": "0.1.0",
   "private": true,
   "homepage": "http://134.213.213.150/11472692_strepsils/build/",
@@ -21,7 +21,7 @@
     "camelcase": "^6.1.0",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
     "css-loader": "4.3.0",
-    "dotenv": "8.2.0",
+    "dotenv": "^8.2.0",
     "dotenv-expand": "5.1.0",
     "eslint": "^7.11.0",
     "eslint-config-react-app": "^6.0.0",
@@ -55,7 +55,6 @@
     "postcss-safe-parser": "5.0.2",
     "react": "^17.0.1",
     "react-app-polyfill": "^2.0.0",
-    "react-dev-utils": "^11.0.0",
     "react-dom": "^17.0.1",
     "react-hammerjs": "^1.0.1",
     "react-html-parser": "^2.0.2",
@@ -81,7 +80,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js && cd build && zip -r Strepsils_Main.zip .",
+    "build": "node scripts/build.js && cd build && zip -r why_opsumit_tool.zip .",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
@@ -158,5 +157,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "react-dev-utils": "^11.0.4"
   }
 }
