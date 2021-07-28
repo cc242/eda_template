@@ -16,12 +16,16 @@ import Page10 from "./pages/Page10";
 import Page11 from "./pages/Page11";
 import Page28 from "./pages/Page28";
 import Page29 from "./pages/Page29";
+import References from "./references/References";
+import {useStore} from "./store/store";
 
 function App() {
     const history = useHistory();
     const location = useLocation();
+    const setReferences = useStore(state => state.setReferences);
+
     const onSVG = () => {
-        
+
         const navBtnR = document.querySelector("#nav-btn-r");
         const navBtnPI = document.querySelector("#nav-btn-pi");
         const navBtnMenu = document.querySelector("#nav-btn-burger");
@@ -29,22 +33,26 @@ function App() {
 
         navBtnR.addEventListener("click", e => {
             e.preventDefault();
-            switch(location.pathname) {
+            switch (location.pathname) {
                 case "/":
-                    history.push("/Page03");
+                    setReferences(0)
+                    // history.push("/Page03");
                     break;
                 case "/Page06":
-                    history.push("/Page07");
+                    setReferences(1)
+                    // history.push("/Page07");
                     break;
                 case "/Page08":
-                    history.push("/Page09");
+                    setReferences(2)
+                    // history.push("/Page09");
                     break;
                 case "/Page10":
-                    history.push("/Page11");
+                    setReferences(3)
+                    // history.push("/Page11");
                     break;
                 default:
-                    // Do nothing
-              }
+                // Do nothing
+            }
         });
 
         navBtnPI.addEventListener("click", e => {
@@ -70,24 +78,23 @@ function App() {
     }
 
     return (
-        <div>
-            <div className="App">
-                    <Switch>
-                        <Route path="/" component={Page01} exact/>
-                        <Route path="/Page03" component={Page03} exact/>
-                        <Route path="/Page04" component={Page04} exact/>
-                        <Route path="/Page05" component={Page05} exact/>
-                        <Route path="/Page06" component={Page06} exact/>
-                        <Route path="/Page07" component={Page07} exact/>
-                        <Route path="/Page08" component={Page08} exact/>
-                        <Route path="/Page09" component={Page09} exact/>
-                        <Route path="/Page10" component={Page10} exact/>
-                        <Route path="/Page11" component={Page11} exact/>
-                        <Route path="/Page28" component={Page28} exact/>
-                        <Route path="/Page29" component={Page29} exact/>
-                    </Switch>
-                    <Navigation />
-            </div>
+        <div className="App">
+            <Switch>
+                <Route path="/" component={Page01} exact/>
+                <Route path="/Page03" component={Page03} exact/>
+                <Route path="/Page04" component={Page04} exact/>
+                <Route path="/Page05" component={Page05} exact/>
+                <Route path="/Page06" component={Page06} exact/>
+                <Route path="/Page07" component={Page07} exact/>
+                <Route path="/Page08" component={Page08} exact/>
+                <Route path="/Page09" component={Page09} exact/>
+                <Route path="/Page10" component={Page10} exact/>
+                <Route path="/Page11" component={Page11} exact/>
+                <Route path="/Page28" component={Page28} exact/>
+                <Route path="/Page29" component={Page29} exact/>
+            </Switch>
+            <Navigation/>
+            <References/>
         </div>
     );
 }
