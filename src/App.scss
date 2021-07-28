@@ -7,11 +7,13 @@ body, html {
   height: 100%;
   background-color: #4b4a4a;
 }
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .fullpage {
   color: #ffffff;
   position: absolute;
@@ -19,6 +21,7 @@ body {
   height: 100%;
   width: 100%;
 }
+
 .wrapper {
   width: 100%;
   height: 100%;
@@ -26,11 +29,27 @@ body {
   top: 0;
   transform-origin: center;
 }
+
 .App {
   position: relative;
   width: 100%;
   height: 100%;
 }
+
+.bg,
+.vect,
+.fg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1024px;
+  height: 768px;
+}
+
+.fg {
+  pointer-events: none;
+}
+
 #root {
   position: relative;
   overflow: hidden;
@@ -38,4 +57,34 @@ body {
   height: 768px;
   min-width: 1024px;
   min-height: 768px;
+}
+
+#nav {
+  pointer-events: none;
+}
+
+.overlay,
+#nav-btn-r,
+#nav-btn-pi,
+#nav-btn-burger,
+#nav-btn-home,
+#home-btn-start,
+#home-btn-indication,
+#home-btn-ae,
+#home-btn-pi,
+#home-btn-opsumit,
+#home-btn-uptravi,
+#home-btn-veletri,
+#p06-btn-1,
+#p06-btn-2,
+#p06-btn-3,
+#p06-btn-4,
+#p06-btn-5,
+#p06-btn-6,
+#p06-btn-7,
+#p06-btn-8,
+#btn-seraphin,
+#btn-seraphin-extension {
+  pointer-events: all;
+  cursor: pointer;
 }
