@@ -1,6 +1,8 @@
 import React from "react";
 import {useHistory} from "react-router-dom";
 import {gsap} from "gsap";
+import References from "../references/References";
+import {useStore} from "../store/store";
 import SVG from "react-inlinesvg";
 import bg from "../assets/p01_bg.jpg";
 import vect from "../assets/p01.svg";
@@ -8,6 +10,7 @@ import fg from "../assets/p01_fg.png";
 
 function Page01() {
     const history = useHistory();
+    const setReferences = useStore(state => state.setReferences);
     const onSVG = () => {
 
         const btnStart = document.querySelector("#home-btn-start");
@@ -32,12 +35,12 @@ function Page01() {
 
         btnIndication.addEventListener("click", e => {
             e.preventDefault();
-            history.push("/Page04");
+            setReferences(1);
         });
 
         btnAE.addEventListener("click", e => {
             e.preventDefault();
-            history.push("/Page05");
+            setReferences(2);
         });
 
         btnPI.addEventListener("click", e => {

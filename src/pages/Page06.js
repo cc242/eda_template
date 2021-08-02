@@ -26,6 +26,36 @@ function Page06() {
             e.preventDefault();
             history.push("/Page10");
         });
+
+        btn3.addEventListener("click", e => {
+            e.preventDefault();
+            history.push("/Page12");
+        });
+
+        btn4.addEventListener("click", e => {
+            e.preventDefault();
+            history.push("/Page14");
+        });
+
+        btn5.addEventListener("click", e => {
+            e.preventDefault();
+            history.push("/Page16");
+        });
+
+        btn6.addEventListener("click", e => {
+            e.preventDefault();
+            history.push("/Page20");
+        });
+
+        btn7.addEventListener("click", e => {
+            e.preventDefault();
+            history.push("/Page22");
+        });
+
+        btn8.addEventListener("click", e => {
+            e.preventDefault();
+            history.push("/Page24");
+        });
     }
 
     return (
