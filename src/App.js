@@ -1,6 +1,8 @@
 import React from 'react';
 import {Switch, Route, useLocation, useHistory} from 'react-router-dom';
+import {gsap} from 'gsap';
 import SVG from "react-inlinesvg";
+import Tooltip from "./nav/Tooltip";
 import References from "./references/References";
 import {useStore} from "./store/store";
 import './App.scss';
@@ -75,7 +77,9 @@ function App() {
 
         navBtnPI.addEventListener("click", e => {
             e.preventDefault();
-            // TBC
+            const t = document.querySelector("#pi-tooltip");
+            gsap.to(t, { duration: 0.25, autoAlpha: 1, ease: "power2.inOut" });
+
         });
 
         navBtnMenu.addEventListener("click", e => {
@@ -114,6 +118,7 @@ function App() {
                         <Route path="/Page26" component={Page26} exact/>
                     </Switch>
                     <Navigation/>
+                    <Tooltip/>
                     <References/>
             </div>
         </div>

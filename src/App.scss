@@ -46,10 +46,6 @@ body {
   height: 768px;
 }
 
-.fg {
-  pointer-events: none;
-}
-
 #root {
   position: relative;
   overflow: hidden;
@@ -59,7 +55,15 @@ body {
   min-height: 768px;
 }
 
-#nav {
+#pi-tooltip {
+  opacity: 0;
+  visibility: hidden;
+  filter: drop-shadow(0 0 5px rgba(51, 51, 51, 0.5));
+}
+
+.fg,
+#nav,
+#pi-tooltip {
   pointer-events: none;
 }
 
@@ -68,6 +72,10 @@ body {
 #nav-btn-pi,
 #nav-btn-burger,
 #nav-btn-home,
+#pi-btn-close,
+#pi-btn-opsumit,
+#pi-btn-uptravi,
+#pi-btn-veletri,
 #home-btn-start,
 #home-btn-indication,
 #home-btn-ae,
@@ -101,6 +109,6 @@ body {
 #p20-btn-seraphin,
 #p22-btn-seraphin,
 #p24-btn-patient-journeys {
-  pointer-events: all;
+  pointer-events: visible;
   cursor: pointer;
 }
